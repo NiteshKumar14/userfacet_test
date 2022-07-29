@@ -7,7 +7,9 @@ app.use(cors({
 }));
 
 const availableSlots = require('./teacher_availability.json');
-
+//post API get the request from the students 
+//takes parameter as (weekdat,start_time,end_time)
+//return response success or not available base on the timings
 app.post('/api/scheduleClass', async (req, res) => {
     try {
         const { weekday, start_time, end_time } = req.body;
@@ -52,6 +54,9 @@ app.post('/api/scheduleClass', async (req, res) => {
     }
 })
 
+//send the details of teacher details like when the teacher can take class based on availabilty
+//just takes the request
+//send the json object as data and message of confirmation 
 app.get('/api/getTeacherDetails', (req, res) => {
     try {
         res.status(200);
@@ -63,6 +68,9 @@ app.get('/api/getTeacherDetails', (req, res) => {
         res.send({ message: "unable to fetch data" });
     }
 })
+
+//to avoid cors error as different origin 
+//cross origin resource sharing 
 app.use(cors({
     origi: '*'
 }));
