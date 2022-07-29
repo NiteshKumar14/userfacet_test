@@ -1,0 +1,17 @@
+{
+  "name": "scheduleclass",
+  "version": "1.0.0",
+  "description": "slotbookingsystem",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nitesh Kumar MCA 33",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "node-fetch": "^3.2.9",
+    "nodemon": "^2.0.19"
+  }
+}
